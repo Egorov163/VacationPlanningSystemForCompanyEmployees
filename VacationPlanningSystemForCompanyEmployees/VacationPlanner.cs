@@ -35,17 +35,6 @@ namespace VacationPlanningSystemForCompanyEmployees
 
             while (remainingDays > 0)
             {
-                /*int vacationLength = remainingDays >= 14 ? (random.Next(2) == 0 ? 7 : 14) : 7;
-                DateTime startDate = GetRandomWorkday();
-                DateTime endDate = startDate.AddDays(vacationLength - 1);
-
-                DateRange newVacation = new DateRange(startDate, endDate);
-
-                if (IsVacationValid(newVacation))
-                {
-                    employee.Vacations.Add(newVacation);
-                    remainingDays -= newVacation.WorkdaysCount();
-                }*/
                 int vacationLength = Math.Min(remainingDays, random.Next(2) == 0 ? 7 : 14); // выбираем между 7 и 14 днями
 
                 DateTime startDate = GetRandomWorkday();
